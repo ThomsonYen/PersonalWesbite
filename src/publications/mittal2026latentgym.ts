@@ -18,6 +18,7 @@ const paper: Publication = {
   equalContribution: 3,
   venue: 'Preprint',
   year: 2026,
+  selected: true,
   arxiv: 'https://arxiv.org/abs/2606.15306',
   summary: `
     Can LLMs continually learn? And how do we train them to do so?

@@ -56,6 +56,7 @@ function PublicationCard({ p }: { p: Publication }) {
           ))}
         </p>
         {/* The toggle sits above the text it reveals, so it never moves when clicked. */}
+        {p.summary && (
         <div className="pub__tldr">
           <button
             type="button"
@@ -67,6 +68,7 @@ function PublicationCard({ p }: { p: Publication }) {
           </button>
           {showSummary && <p className="pub__tldr-text">{p.summary}</p>}
         </div>
+        )}
 
         <div className="pub__links">
           {p.website && (

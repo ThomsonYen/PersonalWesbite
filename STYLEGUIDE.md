@@ -96,7 +96,7 @@ Transitions are `0.15s ease` for color/border changes and `0.2s ease` for elevat
 - Equal-contribution authors get a superscript `*` after their name (set `equalContribution` to how many leading authors share it); the section's closing note explains the `*`.
 - The link row is always in this order: `Paper` (always the neurips.cc virtual page, e.g. `neurips.cc/virtual/2025/loc/san-diego/poster/118592`; omitted for preprints) · `arXiv` · `Website` (project page, if any) · `Cite` · `OpenReview` (only when accepted but the neurips.cc page isn't live yet; never alongside `Paper`).
   Icons: `FiFileText`, `SiArxiv`, `FiGlobe`, `LuQuote`, `FiMessageSquare`.
-- Every paper's TL;DR is collapsed inside a `.pub__tldr` block (not a link-row button). **Selected** papers
+- Every paper's TL;DR is collapsed inside a `.pub__tldr` block (not a link-row button); papers without a `summary` omit the block. **Selected** papers
   (`selected: true`) are always listed; all other papers sit directly **below** the `.pubs-toggle`, hidden until it is clicked.
 - Expanding or collapsing must never move the reader's screen: toggles sit **above** the content they
   reveal, and `Publications.tsx` pins the `.pubs-toggle` to its on-screen position (`overflow-anchor: none`

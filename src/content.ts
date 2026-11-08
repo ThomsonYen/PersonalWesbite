@@ -1,5 +1,7 @@
 // All site content lives here. Edit this file to update the website.
 
+import poeltl2026mbabench2 from './publications/poeltl2026mbabench2'
+import ashok2026gameboyworlds from './publications/ashok2026gameboyworlds'
 import yen2026mbabench from './publications/yen2026mbabench'
 import mittal2026latentgym from './publications/mittal2026latentgym'
 import yen2025data from './publications/yen2025data'
@@ -48,9 +50,9 @@ export type Publication = {
   arxiv?: string
   // Project page, if the paper has one.
   website?: string
-  // A backtick string; wrap it across lines however you like. Line breaks and
+  // Optional; papers without one show no TL;DR block. A backtick string; wrap it across lines however you like. Line breaks and
   // indentation are collapsed into single spaces when shown.
-  summary: string
+  summary?: string
   bibtex: string
 }
 
@@ -59,6 +61,8 @@ export const selfName = 'Thomson Yen'
 
 // One file per paper in src/publications/. Newest first.
 export const publications: Publication[] = [
+  poeltl2026mbabench2,
+  ashok2026gameboyworlds,
   yen2026mbabench,
   mittal2026latentgym,
   yen2025data,
@@ -66,7 +70,7 @@ export const publications: Publication[] = [
   yang2025benchmarking,
   castellani2025synthtools,
   baby2023online,
-].map((p) => ({ ...p, summary: p.summary.trim().replace(/\s+/g, ' ') }))
+].map((p) => ({ ...p, summary: p.summary?.trim().replace(/\s+/g, ' ') }))
 
 // The /quantum/ page, linked from "quantum computing" in About.
 export const quantum = {

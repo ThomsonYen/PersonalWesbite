@@ -19,7 +19,6 @@ const paper: Publication = {
   ],
   venue: 'NeurIPS',
   year: 2026,
-  selected: true,
   openreview: 'https://openreview.net/forum?id=HI4PcfnlXQ',
   arxiv: 'https://arxiv.org/abs/2605.22664',
   website: 'https://mbabench.org/#/',
